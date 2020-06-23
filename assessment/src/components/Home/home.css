@@ -1,1 +1,27 @@
 
+.schoolName{
+  padding:10px;
+  font-size: 40px;
+}
+
+.school-info-container,
+.students-container{
+  align-items: center;
+  width: 500px 25%;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.students-container{
+  border: 2px black solid;
+  padding: 10px;
+  margin: 5% 20%;
+}
+
+.student-info{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
