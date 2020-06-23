@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import DonutChart from '../DonutChart/DonutChart'
 import axios from 'axios'
 import './home.css'
 
@@ -13,8 +14,24 @@ class Home extends Component {
       schoolZip: '53706',
       numUndergradute: 32962,
       numGraduate: 13058,
-      programPercentageObj: {},
-      raceEthnicity: {}
+      programPercentageObj: {
+        "education": 0.0204,
+      "mathematics": null,
+      "business_marketing": 0.1163,
+      "communications_technology": 0.0,
+      "language": 0.0411,
+      "visual_performing": 0.0311
+    },
+      raceEthnicity: {
+      "nhpi": 0.0013,
+      "non_resident_alien": 0.0684,
+      "black_2000": null,
+      "aian_2000": null,
+      "hispanic_prior_2009": null,
+      "asian": 0.0546,
+      "black": 0.021,
+      "api_2000": null,
+    }
     }
   }
 
@@ -43,6 +60,7 @@ class Home extends Component {
 
     return (
       <div>
+
         <div className='schoolName'>{this.state.schoolName}</div>
         <div className='school-info-container'>
         <div>{this.state.schoolWebsite}</div>
@@ -56,6 +74,18 @@ class Home extends Component {
         <div>Total Graduate{this.state.numGraduate}</div>
         </div>
         </div>
+
+        <div className='donut-charts'>
+        <div className='chart'>
+        <DonutChart percentages={this.state.programPercentageObj} title={'Program Percentages'}/>
+        </div>
+        <div className='chart'>
+        <DonutChart
+          percentages={this.state.raceEthnicity}
+          title={'Race/Ethnicity'}/>
+        </div>
+        </div>
+
       </div>
     )
   }

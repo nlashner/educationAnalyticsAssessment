@@ -25,3 +25,13 @@
   flex-direction: column;
   text-align: left;
 }
+
+.chart{
+  height: 300px;
+  width: 100%;
+}
+
+.donut-charts{
+  display: flex;
+  margin: 20px;
+}
