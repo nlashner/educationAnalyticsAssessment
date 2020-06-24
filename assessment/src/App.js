@@ -26,8 +26,7 @@ function App() {
   return (
     <div className="App">
       <div id='pdf'>
-      <button onClick={savePDF}>Save Page as PDF</button>
-      <Navbar />
+      <Navbar savePDF={savePDF}/>
       <Home />
       </div>
     </div>
