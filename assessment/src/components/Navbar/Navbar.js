@@ -7,6 +7,7 @@ const Navbar = () => {
     <div className='nav-container'>
       <img src={logo} alt='education-analytics-logo' className='nav-logo'></img>
       <div>Nora Lashner</div>
+      <div>download as pdf</div>
     </div>
   )
 }

@@ -2,11 +2,11 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  border-bottom: 2px black solid
 }
 
 .nav-logo{
-  height: 200px;
+  height: 100px;
+  width: 100px;
 }
 
 

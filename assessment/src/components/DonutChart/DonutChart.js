@@ -14,7 +14,7 @@ class DonutChart extends Component {
     for(let key in obj){
       if(obj[key] !== null){
         filteredData.push({
-          label: String(parseInt(obj[key]*100)) +'%', y: obj[key]*100, legendText: key
+          label: key, y: obj[key]*100,
         })
       }
     }
@@ -24,14 +24,16 @@ class DonutChart extends Component {
         text: this.props.title,
         fontFamily: 'Arial'
       },
-      legend: {
-        horizontalAlign: "left",
-        verticalAlign: "center",
-      },
+      // legend: {
+      //   horizontalAlign: "left",
+      //   verticalAlign: "center",
+      // },
       data: [{
         type: 'doughnut',
-        indexLabelPlacement: "inside",
-        showInLegend: true,
+        // indexLabel: "#percent%",
+        // percentFormatString: "#0.##",
+        indexLabelPlacement: "outside",
+        // showInLegend: true,
         radius: '70%',
         startAngle: 50,
         dataPoints: filteredData
