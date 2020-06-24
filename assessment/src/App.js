@@ -17,6 +17,8 @@ function savePDF(){
     pdf.addImage(imgData, 'JPEG', 0, 0)
     pdf.save('download.pdf')
   })
+
+  input.classList.remove('pdf')
 }
 
 
