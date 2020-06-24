@@ -27,11 +27,12 @@
 }
 
 .chart{
-  height: 300px;
-  width: 100%;
+  width: 30%;
+  padding: 20px
 }
 
 .donut-charts{
   display: flex;
-  margin: 20px;
+  align-items: center;
+  justify-content: space-around;
 }
