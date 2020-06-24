@@ -53,7 +53,6 @@ class Home extends Component {
 
   }
 
-
   render(){
 
     if(!this.state.schoolName.length) return <h1>loading...</h1>
