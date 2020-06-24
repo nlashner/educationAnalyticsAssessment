@@ -2,6 +2,8 @@ import React, {Component} from 'react'
 import DonutChart from '../DonutChart/DonutChart'
 import axios from 'axios'
 import './home.css'
+import html2canvas from 'html2canvas';
+import jsPDF from 'jspdf';
 
 class Home extends Component {
   constructor(){
@@ -33,6 +35,7 @@ class Home extends Component {
       "api_2000": null,
     }
     }
+    this.savePdf = this.savePdf.bind(this)
   }
 
   async componentDidMount(){
@@ -53,14 +56,27 @@ class Home extends Component {
 
   }
 
+  savePdf(input){
+    html2canvas(input)
+  .then((canvas) => {
+    const imgData = canvas.toDataURL('image/png');
+    const pdf = new jsPDF();
+    pdf.addImage(imgData, 'PNG', 0, 0);
+    pdf.save("download.pdf");
+  })
+;
+  }
+
 
   render(){
 
     if(!this.state.schoolName.length) return <h1>loading...</h1>
 
-    return (
-      <div>
+    const input = document.getElementById('pdf-container');
 
+    return (
+      <div id='pdf-container'>
+        <button onClick={this.savePdf(input)}>GeneratePDF</button>
         <div className='schoolName'>{this.state.schoolName}</div>
         <div className='school-info-container'>
         <div>{this.state.schoolWebsite}</div>
@@ -85,6 +101,8 @@ class Home extends Component {
           title={'Race/Ethnicity'}/>
         </div>
         </div>
+
+
 
       </div>
     )
