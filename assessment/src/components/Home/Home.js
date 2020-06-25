@@ -94,8 +94,6 @@ class Home extends Component {
           percentages={this.state.raceEthnicityLatest}
           title={'Race/Ethnicity'}/>
         </div>
-        <div className='chart'>
-        </div>
         </div>
         <div className='bar-chart'>
         <BarChart

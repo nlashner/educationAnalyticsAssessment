@@ -20,12 +20,14 @@ const DonutChart = (props) => {
     const options = {
       title: {
         text: props.title,
-        fontFamily: 'Arial'
+        fontFamily: 'Arial',
+        fontSize: 20,
       },
       data: [{
         type: 'doughnut',
-        indexLabel: "{label} - #percent%",
-        toolTipContent: "<b>{label}:</b> {y} (#percent%)",
+        indexLabelFontSize: 8,
+        indexLabel: "{label}",
+        toolTipContent: "<b>{label}:</b> (#percent%)",
         radius: '70%',
         startAngle: 50,
         dataPoints: filteredData

@@ -27,10 +27,17 @@ const BarChart = (props) => {
     const options = {
       title: {
         text: 'Race/Ethnicity Latest vs 2000',
-        fontFamily: 'Arial'
+        fontFamily: 'Arial',
+        fontSize: 20,
       },
+      height: 260,
+      theme: "light2",
       axisX: {
         title: 'Race/Ethnicity',
+        fontFamily: 'Arial'
+      },
+      axisY: {
+        title: 'Percent (%)',
         fontFamily: 'Arial'
       },
       data: [{
