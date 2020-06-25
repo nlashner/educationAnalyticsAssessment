@@ -26,10 +26,12 @@ const BarChart = (props) => {
 
     const options = {
       title: {
-        text: 'Race/Ethnicity Latest vs 2000'
+        text: 'Race/Ethnicity Latest vs 2000',
+        fontFamily: 'Arial'
       },
       axisX: {
-        title: 'Race/Ethnicity'
+        title: 'Race/Ethnicity',
+        fontFamily: 'Arial'
       },
       data: [{
         type: 'column',

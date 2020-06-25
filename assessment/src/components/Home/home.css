@@ -30,9 +30,14 @@
   width: 30%;
 }
 
+.bar-chart{
+  width: 40%;
+}
+
+
 .donut-charts{
   display: flex;
   align-items: center;
-  flex-direction: column;
+  /* flex-direction: column; */
   justify-content: space-around;
 }

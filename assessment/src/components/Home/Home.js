@@ -95,13 +95,14 @@ class Home extends Component {
           title={'Race/Ethnicity'}/>
         </div>
         <div className='chart'>
+        </div>
+        </div>
+        <div className='bar-chart'>
         <BarChart
           latest={this.state.raceEthnicityLatest}
           older={this.state.raceEthnicity2010}
           />
-        </div>
-        </div>
-
+         </div>
       </div>
     )
   }
