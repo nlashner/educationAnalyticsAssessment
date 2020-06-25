@@ -5,23 +5,37 @@ const Download = (props) => {
   const { data } = props
   const headers = []
   for(let key in data){
+    if(typeof data[key] === 'object'){
+      let innerObj = data[key]
+      for (let innerKey in innerObj){
+        let headerObj ={
+          label: innerKey,
+          key: innerKey
+        }
+        headers.push(headerObj)
+      }
+    } else {
     let headerObj = {
       label: key,
       key: key
     }
     headers.push(headerObj)
   }
+  }
 
   const csvData = []
   let dataObj = {}
   for(let key in data){
-    dataObj[key] = data[key]
+    if(typeof data[key] === 'object'){
+      let innerObj = data[key]
+      for(let innerKey in innerObj){
+        dataObj[innerKey] = innerObj[innerKey]
+      }
+    } else {
+      dataObj[key] = data[key]
+    }
   }
   csvData.push(dataObj)
-
-
-  console.log(csvData)
-
 
   return (
     <CSVLink data={csvData}>Download me</CSVLink>
