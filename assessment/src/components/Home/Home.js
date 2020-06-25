@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import DonutChart from '../DonutChart/DonutChart'
+import Download from '../Download/Download'
 import axios from 'axios'
 import './home.css'
 
@@ -59,7 +60,7 @@ class Home extends Component {
 
     return (
       <div>
-
+        <Download data={this.state}/>
         <div className='schoolName'>{this.state.schoolName}</div>
         <div className='school-info-container'>
         <div>{this.state.schoolWebsite}</div>
