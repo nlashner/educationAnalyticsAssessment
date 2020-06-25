@@ -10,8 +10,8 @@ const SchoolInfo = (props) => {
       <div className='school-name'>{name}</div>
 
       <div className='info-container'>
-      <a href={'https://' + website} lassName='website' target='_blank'>{website}</a>
-      <div classname='school-address'>{city}, {state}, {zip}</div>
+      <a href={'https://' + website} className='website' target='_blank'>{website}</a>
+      <div className='school-address'>{city}, {state}, {zip}</div>
       </div>
 
       <div className='enrollment'>Total Enrollment: {(numUndergrad + numGradStudents).toLocaleString()}</div>

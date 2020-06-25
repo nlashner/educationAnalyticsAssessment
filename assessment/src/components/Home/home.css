@@ -28,11 +28,11 @@
 
 .chart{
   width: 30%;
-  padding: 20px
 }
 
 .donut-charts{
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: space-around;
 }
