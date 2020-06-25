@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import DonutChart from '../DonutChart/DonutChart'
+import SchoolInfo from '../SchoolInfo/SchoolInfo'
 import axios from 'axios'
 import './home.css'
 
@@ -59,24 +60,20 @@ class Home extends Component {
 
     return (
       <div>
-
-        <div className='schoolName'>{this.state.schoolName}</div>
-        <div className='school-info-container'>
-        <div>{this.state.schoolWebsite}</div>
-        <div>{this.state.schoolCity}, {this.state.schoolState}, {this.state.schoolZip}</div>
-        </div>
-
-        <div className='students-container'>
-        <div>Total Students: {this.state.numUndergradute + this.state.numGraduate}</div>
-        <div className='student-info'>
-        <div>Total Undergrad: {this.state.numUndergradute}</div>
-        <div>Total Graduate{this.state.numGraduate}</div>
-        </div>
-        </div>
-
+        <SchoolInfo
+          name={this.state.schoolName}
+          website={this.state.schoolWebsite}
+          city={this.state.schoolCity}
+          state={this.state.schoolState}
+          zip={this.state.schoolZip}
+          numGradStudents={this.state.numGraduate}
+          numUndergrad={this.state.numUndergradute}
+          />
         <div className='donut-charts'>
         <div className='chart'>
-        <DonutChart percentages={this.state.programPercentageObj} title={'Program Percentages'}/>
+        <DonutChart
+          percentages={this.state.programPercentageObj}
+          title={'Program Percentages'}/>
         </div>
         <div className='chart'>
         <DonutChart
