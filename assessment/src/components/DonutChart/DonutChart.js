@@ -1,48 +1,48 @@
-import React, {Component} from 'react'
+import React from 'react'
 import CanvasJSReact from '../../assets/canvasjs.react';
+import './donutChart.css'
 const CanvasJS = CanvasJSReact.CanvasJS;
 const CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
-class DonutChart extends Component {
 
-
-
-  render(){
+const DonutChart = (props) => {
 
     const filteredData = []
-    let obj = this.props.percentages
+    let obj = props.percentages
     for(let key in obj){
       if(obj[key] !== null){
         filteredData.push({
-          label: String(parseInt(obj[key]*100)) +'%', y: obj[key]*100, legendText: key
+          y: obj[key]*100, label: key
         })
       }
     }
 
     const options = {
       title: {
-        text: this.props.title,
-        fontFamily: 'Arial'
-      },
-      legend: {
-        horizontalAlign: "left",
-        verticalAlign: "center",
+        text: props.title,
+        fontFamily: 'Arial',
+        fontWeight: 'bold',
+        fontSize: 20,
+        margin: 0,
+        padding: 0,
+        dockInsidePlotArea: true
       },
       data: [{
         type: 'doughnut',
-        indexLabelPlacement: "inside",
-        showInLegend: true,
+        indexLabelFontSize: 8,
+        indexLabel: "{label}",
+        toolTipContent: "<b>{label}:</b> (#percent%)",
         radius: '70%',
         startAngle: 50,
         dataPoints: filteredData
       }]
     }
+
     return(
-      <div>
+      <div className="donut-chart">
         <CanvasJSChart options={options} />
       </div>
     )
-  }
 }
 
 export default DonutChart
