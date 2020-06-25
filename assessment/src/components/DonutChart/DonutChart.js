@@ -21,7 +21,11 @@ const DonutChart = (props) => {
       title: {
         text: props.title,
         fontFamily: 'Arial',
+        fontWeight: 'bold',
         fontSize: 20,
+        margin: 0,
+        padding: 0,
+        dockInsidePlotArea: true
       },
       data: [{
         type: 'doughnut',

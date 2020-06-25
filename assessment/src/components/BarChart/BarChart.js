@@ -40,15 +40,20 @@ const BarChart = (props) => {
         title: 'Percent (%)',
         fontFamily: 'Arial'
       },
+      legend: {
+        fontSize: 10,
+      },
       data: [{
         type: 'column',
         name: 'Most Recent',
-        dataPoints: latestData
+        dataPoints: latestData,
+        showInLegend: true
       },
       {
         type: 'column',
         name: '2010',
-        dataPoints: olderData
+        dataPoints: olderData,
+        showInLegend: true
       }]
     }
 
