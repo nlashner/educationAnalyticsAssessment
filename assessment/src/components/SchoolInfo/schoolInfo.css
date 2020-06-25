@@ -1,0 +1,27 @@
+
+.info{
+  padding: 20px;
+}
+
+.school-name{
+  font-size: 40px;
+  text-decoration: bold;
+}
+
+.info-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px 20%;
+  font-size: 25px;
+}
+
+.school-address{
+  display: flex;
+  margin: 10px
+}
+
+.enrollment{
+  padding: 10px;
+  font-size: 25px;
+}
