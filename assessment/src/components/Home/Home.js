@@ -76,7 +76,6 @@ class Home extends Component {
     return (
       <div>
         <Download data={this.state}/>
-
         <SchoolInfo
           name={this.state.schoolName}
           website={this.state.schoolWebsite}
@@ -104,6 +103,7 @@ class Home extends Component {
           older={this.state.raceEthnicity2010}
           />
          </div>
+
       </div>
     )
   }
