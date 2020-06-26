@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import DonutChart from '../DonutChart/DonutChart'
+import Download from '../Download/Download'
 import BarChart from '../BarChart/BarChart'
 import SchoolInfo from '../SchoolInfo/SchoolInfo'
 import axios from 'axios'
@@ -74,6 +75,7 @@ class Home extends Component {
 
     return (
       <div>
+        <Download data={this.state}/>
         <SchoolInfo
           name={this.state.schoolName}
           website={this.state.schoolWebsite}
@@ -101,6 +103,7 @@ class Home extends Component {
           older={this.state.raceEthnicity2010}
           />
          </div>
+
       </div>
     )
   }
