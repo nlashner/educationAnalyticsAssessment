@@ -8,18 +8,18 @@
 }
 
 .donut-charts,
-.bar-chart{
+.bar-chart-home{
   display: flex;
   align-items: center;
   /* flex-direction: column; */
   justify-content: center;
 }
 
-.bar-chart{
+.bar-chart-home{
   align-self: center;
   margin: 0 5%;
-  padding-bottom: 30px;
-  width: 40%;
+  padding: 30px;
+  width: 50%;
 }
 
 @media only screen and (max-width: 600px) {
@@ -28,5 +28,4 @@
     width: relative;
     padding-top: 50px
   }
-
 }

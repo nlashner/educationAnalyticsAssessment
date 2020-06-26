@@ -5,7 +5,5 @@
 @media only screen and (max-width: 600px) {
   .donut-chart{
     margin: -40px;
-    align-content: left;
   }
-
 }

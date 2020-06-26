@@ -39,7 +39,7 @@ const DonutChart = (props) => {
     }
 
     return(
-      <div className="donut-chart">
+      <div className='donut-chart'>
         <CanvasJSChart options={options} />
       </div>
     )

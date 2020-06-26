@@ -1,0 +1,11 @@
+.bar-chart{
+  align-items: center;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .bar-chart{
+    width: 300px;
+    margin: 10px
+  }
+}
