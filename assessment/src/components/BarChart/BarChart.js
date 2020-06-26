@@ -1,7 +1,9 @@
 import React from 'react'
 import CanvasJSReact from '../../assets/canvasjs.react';
+import './barChart.css'
 const CanvasJS = CanvasJSReact.CanvasJS;
 const CanvasJSChart = CanvasJSReact.CanvasJSChart;
+
 
 const BarChart = (props) => {
     const { latest, older } = props
@@ -59,7 +61,7 @@ const BarChart = (props) => {
 
 
     return (
-      <div>
+      <div className='bar-chart'>
         <CanvasJSChart options={options} />
       </div>
     )

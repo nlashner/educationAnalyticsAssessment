@@ -7,21 +7,25 @@
   width: 30%;
 }
 
-.bar-chart{
-  width: 40%;
-}
-
-
 .donut-charts,
-.bar-chart{
+.bar-chart-home{
   display: flex;
   align-items: center;
   /* flex-direction: column; */
   justify-content: center;
 }
 
-.bar-chart{
+.bar-chart-home{
   align-self: center;
   margin: 0 5%;
-  padding-bottom: 30px
+  padding: 30px;
+  width: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+  .donut-charts{
+    flex-direction: column;
+    width: relative;
+    padding-top: 50px
+  }
 }
