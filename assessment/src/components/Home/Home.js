@@ -49,29 +49,27 @@ class Home extends Component {
   }
 
   async componentDidMount(){
-    let queryString = 'https://api.data.gov/ed/collegescorecard/v1/schools/?school.operating=1&2015.academics.program_available.assoc_or_bachelors=true&2015.student.size__range=1..&school.degrees_awarded.predominant__range=1..3&school.degrees_awarded.highest__range=2..4&id=240444&api_key='
-    let apiKey = 'wx5ciB6nDQx9zNRBxYgsr44yww3Jp5IZgP6tLMZC'
-    let { data } = await axios.get(queryString + apiKey)
-    this.setState({
-      schoolName: data.results[0].school.name,
-      schoolWebsite: data.results[0].school.school_url,
-      schoolCity: data.results[0].school.city,
-      schoolState: data.results[0].school.state,
-      schoolZip: data.results[0].school.zip.slice(0,5),
-      numUndergraduate: data.results[0]['latest'].student.enrollment.undergrad_12_month,
-      numGraduate: data.results[0]['latest'].student.enrollment.grad_12_month,
-      programPercentageObj: data.results[0]['latest'].academics.program_percentage,
-      raceEthnicityLatest: data.results[0]['latest'].student.demographics.race_ethnicity,
-      raceEthnicity2010: data.results[0]['2010'].student.demographics.race_ethnicity
-    })
+    // let queryString = 'https://api.data.gov/ed/collegescorecard/v1/schools/?school.operating=1&2015.academics.program_available.assoc_or_bachelors=true&2015.student.size__range=1..&school.degrees_awarded.predominant__range=1..3&school.degrees_awarded.highest__range=2..4&id=240444&api_key='
+    // let apiKey = 'wx5ciB6nDQx9zNRBxYgsr44yww3Jp5IZgP6tLMZC'
+    // let { data } = await axios.get(queryString + apiKey)
+    // this.setState({
+    //   schoolName: data.results[0].school.name,
+    //   schoolWebsite: data.results[0].school.school_url,
+    //   schoolCity: data.results[0].school.city,
+    //   schoolState: data.results[0].school.state,
+    //   schoolZip: data.results[0].school.zip.slice(0,5),
+    //   numUndergraduate: data.results[0]['latest'].student.enrollment.undergrad_12_month,
+    //   numGraduate: data.results[0]['latest'].student.enrollment.grad_12_month,
+    //   programPercentageObj: data.results[0]['latest'].academics.program_percentage,
+    //   raceEthnicityLatest: data.results[0]['latest'].student.demographics.race_ethnicity,
+    //   raceEthnicity2010: data.results[0]['2010'].student.demographics.race_ethnicity
+    // })
 
   }
 
   render(){
 
     if(!this.state.schoolName.length) return <h1>loading...</h1>
-
-    console.log(this.state)
 
     return (
       <div>

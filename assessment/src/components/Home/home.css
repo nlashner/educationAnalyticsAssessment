@@ -7,11 +7,6 @@
   width: 30%;
 }
 
-.bar-chart{
-  width: 40%;
-}
-
-
 .donut-charts,
 .bar-chart{
   display: flex;
@@ -23,5 +18,15 @@
 .bar-chart{
   align-self: center;
   margin: 0 5%;
-  padding-bottom: 30px
+  padding-bottom: 30px;
+  width: 40%;
+}
+
+@media only screen and (max-width: 600px) {
+  .donut-charts{
+    flex-direction: column;
+    width: relative;
+    padding-top: 50px
+  }
+
 }

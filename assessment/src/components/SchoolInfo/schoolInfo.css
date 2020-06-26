@@ -25,3 +25,16 @@
   padding: 10px;
   font-size: 25px;
 }
+
+@media only screen and (max-width: 600px) {
+  .info{
+    width: auto;
+  }
+  .school-name{
+    font-size: 20px
+  }
+  .info-container{
+    font-size: 10px
+  }
+
+}
