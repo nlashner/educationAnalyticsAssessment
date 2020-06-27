@@ -14,8 +14,6 @@ const SchoolInfo = (props) => {
       <div className='enrollment'>Total Enrollment: {(numUndergrad + numGradStudents).toLocaleString()}</div>
       <div>Undergrad Students: {numUndergrad.toLocaleString()}</div>
       <div>Grad Students: {numGradStudents.toLocaleString()}</div>
-
-
     </div>
   )
 }

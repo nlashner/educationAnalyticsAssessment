@@ -57,9 +57,7 @@ const BarChart = (props) => {
         dataPoints: latestData,
         showInLegend: true
       }]
-
     }
-
 
     return (
       <div className='bar-chart'>
