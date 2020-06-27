@@ -9,7 +9,7 @@ const Download = (props) => {
     if(typeof data[key] === 'object'){
       let innerObj = data[key]
       for (let innerKey in innerObj){
-        let headerObj ={
+        let headerObj = {
           label: innerKey,
           key: innerKey
         }
