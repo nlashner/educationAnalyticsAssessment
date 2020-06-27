@@ -3,7 +3,7 @@ Education Analytics Jr Full Stack Skills Assessment
 
 
 ##  To Start
-To start on local server run `npm start`
+To start on your local server run `npm start`
 
 ## Features
 
