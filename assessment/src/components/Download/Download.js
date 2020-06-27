@@ -1,5 +1,5 @@
 import React from 'react'
-import { CSVLink, CSVDownload } from "react-csv";
+import { CSVLink } from "react-csv";
 import './download.css'
 
 const Download = (props) => {
@@ -39,7 +39,7 @@ const Download = (props) => {
   csvData.push(dataObj)
 
   return (
-    <CSVLink data={csvData} className='download-button'>Export Data As CSV</CSVLink>
+    <CSVLink data={csvData} className='download-button' filename={"education_data.csv"}>Export Data As CSV</CSVLink>
   )
 }
 
