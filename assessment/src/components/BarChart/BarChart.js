@@ -28,7 +28,7 @@ const BarChart = (props) => {
 
     const options = {
       title: {
-        text: 'Race/Ethnicity Latest vs 2000',
+        text: 'Race/Ethnicity Most Recent Year vs 2010',
         fontFamily: 'Arial',
         fontSize: 20,
       },
@@ -46,17 +46,18 @@ const BarChart = (props) => {
         fontSize: 10,
       },
       data: [{
+          type: 'column',
+          name: '2010',
+          dataPoints: olderData,
+          showInLegend: true
+        },
+        {
         type: 'column',
         name: 'Most Recent',
         dataPoints: latestData,
         showInLegend: true
-      },
-      {
-        type: 'column',
-        name: '2010',
-        dataPoints: olderData,
-        showInLegend: true
       }]
+
     }
 
 

@@ -5,7 +5,8 @@
 
 @media only screen and (max-width: 600px) {
   .bar-chart{
+    align-items: center;
     width: 300px;
-    margin: 10px
+    margin: 40px;
   }
 }
