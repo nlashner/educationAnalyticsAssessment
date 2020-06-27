@@ -1,4 +1,4 @@
-## Nora Lashner
+Nora Lashner
 Education Analytics Jr Full Stack Skills Assessment
 
 
@@ -8,7 +8,9 @@ To start on local server run `npm start`
 ## Features
 
 -The PDF icon in the navbar is a button to download the page as a PDF
+
 -The printer icon in the navbar will print the window
+
 -The Export Data as CSV button at the top of the page will download all the data to a .csv file
 
 ## Notes:
